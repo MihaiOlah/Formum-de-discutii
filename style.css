@@ -1,0 +1,384 @@
+/*Global styling*/
+html {
+    font-size: 15px;
+    background-color: rgb(0, 0, 0);
+    color: #FEFEFE;
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none; /*Ca sa nu mai fie subliniate titlurile*/
+    color: #a82828
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*home.html*/
+
+.container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.subforum {
+    margin-top: 20px;
+}
+
+.subforum-title {
+    background-color: #34383d;
+    height: 50px;
+    padding-left: 5px;
+    padding-top: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+
+.subforum-row {
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%; /*Cat la suta ocupa fiecare sectiune (cartea, descrierea, nr topics si autorul)*/
+}
+
+.subforum-column {
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #111312;
+}
+
+ /*Ca sa centram vertical si orizontal*/
+.centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subforum-icon {
+    font-size: 40px;
+}
+
+.subforum-description * {
+    margin-block: 0;
+}
+
+/*Ca sa nu fie prea mari icoanele pentru ecranele mici (gen mobile) setem niste parametri in functie de ecran*/
+/*In loc de 4 coloane, sunt 2 randuri cu 2 coloane fiecare*/
+@media screen and (max-width: 460px) { 
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .subforum-row {
+        display: grid;
+        grid-template-columns: 25% 75%; /*Cat la suta ocupa fiecare sectiune (cartea, descrierea, nr topics si autorul)*/
+        grid-template-rows: 65% 35%;
+    }
+
+    .subforum-statistics {
+        font-size: 12px;
+    }
+}
+
+/*Stil bara de navigare si elementele aferente*/
+header {
+    margin-inline: 10px;
+}
+
+.navigation-bar {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    background-color: #52057b;
+    padding: 10px;
+    width: 65%;
+    display: inline-block;
+    border-radius: 5px;
+    max-height: 80px;
+    margin-right: 10px;
+}
+
+.navigation-list {
+    list-style-type: none;
+    overflow: hidden;       /*In caz in care continutul depaseste box-ul in care se afla, acesta este ascuns (continutul extra)*/
+}
+
+.navigation-item a {
+    float: right;           /*Aliniat la dreapta containerului*/
+    display: block;         /*Afiseaza elementul ca un bloc, gen <p>*/
+    text-align: center;
+    margin-inline: 20px;
+    font-size: 20px;
+    padding: 10px;
+    color: #fff;
+}
+
+.navigation-item a:hover {
+    background-color: rgb(0, 0, 0, 0.1);
+}
+
+.close-icon i {
+    font-size: 60px;
+    float: left;
+    cursor: pointer;
+} 
+
+/*clasa pentru a ascunde bara de navigare*/
+.hide {
+    display: none;
+}
+
+.bar-icon {
+    font-size: 60px;
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: aquire;
+    src: url(aquire.otf);
+}
+
+.forum-title-menu {
+    font-size: 60;
+    display: inline-block;
+    font-family: aquire;
+}
+
+/*Search box*/
+.search-box {
+    border: solid 1px #52057b;
+    margin-top: 20px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #52057b;
+}
+
+.search-box select {
+    padding: 10px;
+}
+
+.search-box input {
+    padding: 10px;
+}
+
+.search-box button {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+}
+
+.search-box button:hover {
+    background-color: #000;
+    color: #fff;
+    box-shadow: 1px 2px 3px #fff;
+}
+
+/*Forum info*/
+.forum-info {
+    padding: 20px;
+    background-color: #111314;
+}
+
+.chart {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/*Footer*/
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #52057b;
+    display: block;
+    text-align: left;
+}
+
+/*PENTRU posts.html*/
+
+.table-head {
+    display: flex;
+}
+
+.table-head div {
+    padding: 5px;
+    margin: 2px;
+    background-color: #2C2C2C;
+    font-weight: bold;
+}
+
+/*Setam stilul pentru fiecare coloana din tabel*/
+.table-head .status{
+    flex: 5%;
+}
+
+.table-head .subjects{
+    flex: 70%;
+}
+
+.table-head .replies{
+    flex: 10%;
+}
+
+.table-head .last-reply{
+    flex: 15%;
+}
+
+/*Stilul pentru corpul tabelului*/
+.table-row {
+    display: flex;
+}
+
+.table-row .status, .table-row .subjects, .table-row .replies, .table-row .last-reply {
+    padding: 5px;
+    margin: 2px;
+    background-color: #131415;
+}
+
+.table-row .status{
+    flex: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table-row .subjects{
+    flex: 70%;
+}
+
+.table-row .replies{
+    flex: 10%;
+}
+
+.table-row .last-reply{
+    flex: 15%;
+}
+
+/*Stil numerotare pagini (Pagination)*/
+
+.pagination {
+    padding: 20px;
+    font-size: 15px;
+}
+
+.pagination a {
+    color: #fff;
+    margin-inline: 5px;
+    padding: 5px 10px;
+    border: solid 0.5px #fff;
+}
+
+.pagination a:hover {
+    opacity: 0.5;
+}
+
+/*Navigation*/
+
+.navigate {
+    margin-block: 20px;
+    font-weight: lighter;
+    font-size: 24px;
+}
+
+.navigate a{
+    color: #fff;
+}
+
+.navigate a:hover {
+    color: #FF0042;
+    font-weight: bolder;
+}
+
+/*Note-ul din josul paginii, unde arata ce semnifica simbolurile*/
+
+.note {
+    background-color: #111314;
+    padding: 20px;
+    display: block;
+}
+
+.note span {
+    font-size: 20px;
+    margin-block: 5px;
+}
+
+/*STIL details.html*/
+
+.head {
+    display: flex;
+    background-color: #2C2C2C;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors {
+    flex: 20%;
+}
+
+.content {
+    flex: 80%
+}
+
+.body {
+    display: flex;
+    background-color: #131415;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.body .authors .username {
+    font-size: 20px;
+}
+
+.body .authors img {
+    max-width: 60px;
+    max-height: 90px;
+}
+
+.body .content .comment button {
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    float: right;
+}
+
+/*Comentariile care se vor adauga de catre utlizator*/
+
+.comment-area {
+    margin-top: 50px;
+}
+
+.comment-area textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.comment-area input {
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment-area input:hover {
+    border: solid 1px #000
+}
+
+.comments-container {
+    margin-top: 50px;
+}

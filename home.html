@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyForum</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--Trebuie incarcat fisierul inainte-->
+        <script type="text/javascript" src="main.js"></script>
+        <header>
+            <div class="navigation-bar">
+                <nav class="navigation hide" id="navigation">
+                    <ul class="navigation-list">
+                        <span class="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span> <!-- X-ul de inchidere a forumului-->
+                        <li class="navigation-item">
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="details.html">Details</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="posts.html">Posts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--Punem # in ref ca sa indicam la topul paginii curente-->
+                <a href="#" class="bar-icon" id="bar-icon" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+                <div class="forum-title-menu">My Forum</div>
+            </div>
+            <!--Search Box-->
+            <div class="search-box">
+                <!--Asta face o lista dropdown-->
+                <select name="" id="">
+                    <option value="everything">Everything</option>
+                    <option value="titles">Title</option>
+                    <option value="description">Description</option>
+                </select>
+                <!--Utilizatorul introduce aici textul pe care il cauta-->
+                <input type="text" name="q" id="" placeholder="Search..">
+                <!--Butonul de submit-->
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </header>
+        <div class="container">
+            <div class="subforum">
+                <div class="subforum-title">
+                    <h1>General Information</h1>
+                </div>
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subforum">
+                <div class="subforum-title">
+                    <h1>General Information</h1>
+                </div>
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+            </div>
+
+             <div class="subforum">
+                <div class="subforum-title">
+                    <h1>General Information</h1>
+                </div>
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subforum">
+                <div class="subforum-title">
+                    <h1>General Information</h1>
+                </div>
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-book"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="">Description title</a></h1>
+                        <p>Description Content: sfdfdfdsffff</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>100 Topics / 23 Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="">Last Post</a></b> by <a href="">User Name</a>
+                        <br>
+                        on <small>11 11 2021</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Forum Info-->
+        <div class="forum-info">
+            <div class="chart">
+                My Forum - Stats &nbsp;<i class="fa fa-bar-chart"></i>
+            </div>
+            <div>
+                <span>4343 Posts in 34 Topics by 325 Users</span><br>
+                <span>Latest Post: <b><a href="#">Random Post</a></b> on 21 April 2021 by <a href="#">User</a></span>
+            </div>
+
+        </div>
+        
+        <footer>
+            <span>&copy; &nbsp; By Antonio Princz & Olah Mihai</span>
+        </footer>
+        <!--<script scr="main.js"></script>-->
+    </body>
+</html>

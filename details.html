@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyForum</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--Trebuie incarcat fisierul inainte-->
+        <script type="text/javascript" src="main.js"></script>
+        <header>
+            <div class="navigation-bar">
+                <nav class="navigation hide" id="navigation">
+                    <ul class="navigation-list">
+                        <span class="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span> <!-- X-ul de inchidere a forumului-->
+                        <li class="navigation-item">
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="details.html">Details</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="posts.html">Posts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--Punem # in ref ca sa indicam la topul paginii curente-->
+                <a href="#" class="bar-icon" id="bar-icon" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+                <div class="forum-title-menu">My Forum</div>
+            </div>
+            <!--Search Box-->
+            <div class="search-box">
+                <!--Asta face o lista dropdown-->
+                <select name="" id="">
+                    <option value="everything">Everything</option>
+                    <option value="titles">Title</option>
+                    <option value="description">Description</option>
+                </select>
+                <!--Utilizatorul introduce aici textul pe care il cauta-->
+                <input type="text" name="q" id="" placeholder="Search..">
+                <!--Butonul de submit-->
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </header>
+
+        <div class="container">
+            <!--Navigation-->
+            <div class="navigate">
+                <span><a href="#">My Forum - Forums</a> >> <a href="#">Random Forum</a> >> <a href="#">Random Post title</a></span>
+            </div>
+
+            <div class="topic-container">
+                <div class="head">
+                    <div class="authors">Author</div>
+                    <div class="content">Topic: post's title (Read 23 times)</div>
+                </div>
+    
+                <div class="body">
+                    <!--Detalii autor postare-->
+                    <div class="authors">
+                            <div class="username"><a href="#">Username</a></div>
+                            <div>Role</div>
+                            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/E39C/production/_111686285_pic2.png" alt="">
+                            <div>Posts: 45</div>
+                            <div>Points: 432</div>
+                    </div>
+    
+                    <div class="content">
+                        Just a random content of a random post
+                        <br> To see how it looks like.
+                        <br><br>
+                        Nothing else
+                        <br><br>
+                        <hr>
+                        Regards Username
+                        <div class="comment">
+                            <button onclick="showComment()">Comment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+
+            <!--Comment input-->
+            <div class="comment-area hide" id="comment-area">
+                <textarea name="comment" id="" placeholder="Comment here"></textarea>
+                <input type="submit" name="" id="" value="submit">
+            </div>
+
+            <!--Show Comments-->
+            <div class="comments-container">
+                <div class="head">
+                    <div class="authors">Author</div>
+                    <div class="content">Comments</div>
+                </div>
+    
+                <div class="body">
+                    <!--Detalii autor postare-->
+                    <div class="authors">
+                            <div class="AnotherUser"><a href="#">Username</a></div>
+                            <div>Role</div>
+                            <img src="https://ichef.bbci.co.uk/news/976/cpsprodpb/E39C/production/_111686285_pic2.png" alt="">
+                            <div>Posts: 45</div>
+                            <div>Points: 432</div>
+                    </div>
+    
+                    <div class="content">
+                        Just a random comment of a random post
+                        <br> To see how it looks like.
+                        <br><br>
+                        Nothing else
+                        <br>
+                        <div class="comment">
+                            <button onclick="showReply()">Reply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Reply input-->
+            <div class="comment-area hide" id="reply-area">
+                <textarea name="comment" id="" placeholder="Reply here"></textarea>
+                <input type="submit" name="" id="" value="submit">
+            </div>   
+        </div>
+
+        <footer>
+            <span>&copy; &nbsp; By Antonio Princz & Olah Mihai</span>
+        </footer>
+        <!--<script scr="main.js"></script>-->
+    </body>
+</html>
