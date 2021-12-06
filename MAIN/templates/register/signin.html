@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}    <!--Template de form de inregistrare-->
+{% block content %}
+
+<h1 style="text-align:center; margin-block:50px; color:red;">Login</h1>
+
+<form method="POST" action="." style="margin-block:150px;">
+    {% csrf_token %}        <!--Un cod unic folosit pentru motive de securitate la inregistrari-->
+    {{form|crispy}}         <!--Adaugam template-ul la formular-->
+    <input type="submit" value="Sign in" style="margin-block:50px;">
+</form>
+
+{% endblock content %}

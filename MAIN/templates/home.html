@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="container">
+            <div class="subforum">
+                <div class="subforum-title">
+                    <h1>General Information</h1>
+                </div>
+                
+                {% for home in home %}
+                <div class="subforum-row">
+                    <div class="subforum-icon subforum-column centre"> 
+                        <!--Toate simbolurile incep cu fa-nume. Ca sa meargam mai trebuie un fa inainte de fa-nume-->
+                        <!--Toate fa fa symbols https://www.w3schools.com/icons/fontawesome_icons_webapp.asp-->
+                        <i class="fa fa-comments"></i> 
+                    </div>
+                    <div class="subforum-description subforum-column">
+                        <h1><a href="{{home.get_url}}">{{home.title}}</a></h1>
+                        <p>Description : {{home.description}}</p>
+                    </div>
+                    <div class="subforum-statistics subforum-column centre">
+                        <span>{{ home.number_of_posts}} Posts</span>
+                    </div>
+                    <div class="subforum-last-post subforum-column">
+                        <b><a href="{{home.last_post.get_url}}">Last Post</a></b> by <a href="">{{home.last_post.user.fullName|title}}</a>
+                        <br>
+                        on <small>{{home.last_post.date|date}}</small>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!--Forum Info-->
+        <div class="forum-info">
+            <div class="chart">
+                Hermes - Stats &nbsp;<i class="fa fa-bar-chart"></i>
+            </div>
+            <div>
+                <span>{{num_posts}} Posts in {{num_categories}} Topics by {{num_users}} Users</span><br>
+                <span>Latest Post: <b><a href="{{last_post.get_url}}">{{last_post.title}}</a></b> {{last_post.date|date}} by <a href="#">{{last_post.user.fullName|title}}</a></span><br>
+                <span>You can check the latest posts <a href="{% url 'latest_posts'%}">here</a>.</span><br>
+            </div>
+
+        </div>
+        
+ {% endblock content %}

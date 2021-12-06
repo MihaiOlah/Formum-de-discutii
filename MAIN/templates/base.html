@@ -1,0 +1,68 @@
+{% load static %}
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <!--Trebuie incarcat fisierul inainte-->
+        <script type="text/javascript" src="{% static 'main.js' %}"></script>
+        <header>
+            <div class="navigation-bar">
+                <nav class="navigation hide" id="navigation">
+                    <ul class="navigation-list">
+                        <span class="close-icon" onclick="showIconBar()"><i class="fa fa-close"></i></span> <!-- X-ul de inchidere a forumului-->
+                        <li class="navigation-item">
+                            <a href="{% url 'home' %}">Home</a>
+                        </li>
+                        
+                        <!--Daca utilizatorul este logat, atunci ii dam optiunea de a se deloga in bara de navigare-->
+                        {% if user.is_authenticated %}
+                        <li class="navigation-item">
+                            <a href="{% url 'logout' %}">Log out</a>
+                        </li>
+                        {% else %}
+                        <!--Altfel daca utilizatorul nu este logat, atunci ii dam optiunea de a se loga sau de a se inregistra in bara de navigare-->
+                        <li class="navigation-item">
+                            <a href="{% url 'signup' %}">Sign up</a>
+                        </li>
+                        <li class="navigation-item">
+                            <a href="{% url 'signin' %}">Sign in</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                <!--Punem # in ref ca sa indicam la topul paginii curente-->
+                <a href="#" class="bar-icon" id="bar-icon" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
+                <div class="forum-title-menu">Hermes</div>
+
+                <!--Daca utilizatorul e logat, atunci ii dam optiunea sa creeze o postare-->
+                {% if user.is_authenticated %}
+                <div style="font-size:50px;font-weight300px;margin-left:100px"><a href="{% url 'create_post' %}">+</a></div>
+                {% endif %}
+            </div>
+            <!--Search Box-->
+            <div class="search-box">
+                <!--Asta face o lista dropdown-->
+                <select name="" id="">
+                    <option value="everything">Everything</option>
+                    <option value="titles">Title</option>
+                    <option value="description">Description</option>
+                </select>
+                <!--Utilizatorul introduce aici textul pe care il cauta-->
+                <input type="text" name="q" id="" placeholder="Search...">
+                <!--Butonul de submit-->
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </header>
+    {% block content %}
+        
+    {% endblock content %}
+
+        <script scr="{% static 'main.js' %}"></script>
+    </body>
+</html>
